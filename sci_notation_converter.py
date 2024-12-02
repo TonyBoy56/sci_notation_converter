@@ -4,6 +4,7 @@ def accept_input():
     
     if name:
         print(f"Excellent. Nice to meet you {name}. Let's get started.")
+        print("Enter a number in scientific notation. I will convert into a floating-point number for you")
     
     
     
