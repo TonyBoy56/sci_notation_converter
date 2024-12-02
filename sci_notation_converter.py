@@ -1,5 +1,14 @@
+from pynput.keyboard import Key, Controller
+
 # Accept input from the user
 def accept_input():
+    keyboard = Controller()
+    
+    keyboard.press(Key.ctrl)
+    keyboard.press('`')
+    keyboard.release(Key.ctrl)
+    keyboard.release('`')
+    
     name = input("Hello, user. Please enter your name: ")
     
     if name:
