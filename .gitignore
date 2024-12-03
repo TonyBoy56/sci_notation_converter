@@ -72,3 +72,6 @@ dmypy.json
 
 # Python 3.12 specific virtualenv
 python3.12/
+
+# Other
+tempCodeRunnerFile.py
