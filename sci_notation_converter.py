@@ -10,7 +10,7 @@ def accept_input():
     keyboard.release('`')
     
     name = input("Hello, user. Please enter your name: ")
-    
+    print(type(name))
     if name:
         print(f"Excellent. Nice to meet you {name}. Let's get started.")
         print("Enter a number in scientific notation. I will convert into a floating-point number for you")
