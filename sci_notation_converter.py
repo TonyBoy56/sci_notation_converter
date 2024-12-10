@@ -48,20 +48,15 @@ def float_to_notation(float_input):
     input_char_list.pop(decimal_index)
     # Insert the decimal at index 1
     input_char_list.insert(1, '.')
-    print(input_char_list, places_moved)
     
-    # # run a for loop
-    # for i in range(len(input_char_list)):
-    #     for j in range(i + 1, len(input_char_list)):
-    #         distance = j - i
-    #         print("distance between i and j", distance)
-        
-        # if (input_char_list[i] == "."):
-        #     print(i, f"list: {input_char_list}")
-        #     decimal = input_char_list[i]
-        #     input_char_list.remove(decimal)
-        #     input_char_list.insert(1, decimal)
-        #     print(input_char_list)
+    # print(input_char_list, places_moved)
+    
+    # join the list and store as a float
+    result_string = float(''.join(input_char_list))
+    print(result_string)
+    print(f"result string data type: {type(result_string)}")
+    
+    
 # Convert input of scientific notation value to floating-point number
 
 init_user_input()
