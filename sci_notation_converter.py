@@ -42,7 +42,13 @@ def float_to_notation(float_input):
     else:
         raise ValueError("Error: the number must contain a decimal point.")
     
-    print(decimal_index)
+    # Calculate how many places the decimal needs to move
+    places_moved = 1 - decimal_index
+    # Remove the decimal from the current index
+    input_char_list.pop(decimal_index)
+    # Insert the decimal at index 1
+    input_char_list.insert(1, '.')
+    print(input_char_list, places_moved)
     
     # # run a for loop
     # for i in range(len(input_char_list)):
