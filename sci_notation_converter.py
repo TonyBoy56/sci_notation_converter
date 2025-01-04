@@ -43,25 +43,31 @@ def float_to_notation(float_input):
         raise ValueError("Error: the number must contain a decimal point.")
     
     # Calculate how many places the decimal needs to move
-    places_moved = 1 - decimal_index
+    
+    if float_input > .99:
+        places_moved = 1 - decimal_index
+    else:
+        print("float_input is less than 1")
+        
     # Remove the decimal from the current index
     input_char_list.pop(decimal_index)
     # Insert the decimal at index 1
     input_char_list.insert(1, '.')
     
     # Determine negative/positive exponent
-    if float_input < 1 and float_input > 0:
-        if places_moved < 0:
-            places_moved
-        else: 
-            places_moved = places_moved * -1
+    # if float_input < 1 and float_input > 0:
+    #     if places_moved < 0:
+    #         places_moved
+    #     else: 
+    #         places_moved = places_moved * -1
     
     # print(input_char_list, places_moved)
     
     # join the list and store as a float
-    result_string = float(''.join(input_char_list))
-    print(f"Value of the result_string: {result_string}; value of places_moved: {places_moved}")
-    print(f"result string data type: {type(result_string)}")
+    result_num = float(''.join(input_char_list))
+    print(f"Value of the result_num: {result_num}") 
+    print(f"value of places_moved: {places_moved}")
+    print(f"result string data type: {type(result_num)}")
     
     
 # Convert input of scientific notation value to floating-point number
