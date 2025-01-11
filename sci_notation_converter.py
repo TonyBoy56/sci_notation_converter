@@ -44,7 +44,7 @@ def float_to_notation(float_input):
     
     # Calculate how many places the decimal needs to move
     
-    if float_input > .99:
+    if float_input > .99 or float_input < -.99:
         places_moved = 1 - decimal_index
     else:
         print("float_input is less than 1")
@@ -52,7 +52,11 @@ def float_to_notation(float_input):
     # Remove the decimal from the current index
     input_char_list.pop(decimal_index)
     # Insert the decimal at index 1
-    input_char_list.insert(1, '.')
+    if input_char_list[0] != "-":
+        input_char_list.insert(1, '.')
+    else:
+        input_char_list.insert(2, '.')
+        
     
     # Determine negative/positive exponent
     # if float_input < 1 and float_input > 0:
