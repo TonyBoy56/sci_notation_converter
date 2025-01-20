@@ -24,9 +24,8 @@ def user_keypress():
 # Convert string input to float
 def str_to_float(input):
     try:
+        # convert string input to float
         input = float(input)
-        # confirm the value of input is a float type
-        # print(type(input), input)
         float_to_notation(input)
     except Exception as e:
         print(f"Invalid input occurred: {e}")
